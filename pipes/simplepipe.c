@@ -9,7 +9,7 @@ int main()
 {
 	int fd, p[2];
 
-	if(pipe(p) == -1)
+	if(pipe(p) == -1) /* pipe():allocates fd 3 and 4 for pipe */
 		errxt("pipe");
 	fd = fork();
 	if(fd == -1)
