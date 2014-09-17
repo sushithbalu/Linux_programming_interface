@@ -1,1 +1,36 @@
-This is my new git repo
+_Important Linux System Calls_
+
+fork- create a child process
+	#include<unistd.h>
+	pid_t fork(void);
+
+exec- execute a file
+	#include<unistd.h>
+	int execl(const char *path, const char *arg, ...);
+
+open- open a file
+	#include<sys/types.h>
+	#inlude<fcntl.h>
+	int open(const char *pathname, int flags);
+
+close- close a file descripter
+	#inlude<unistd.h>
+	int close(int fd);
+	
+read- read from a file descriptor
+	#include<unistd.h>
+	ssize_t read(int fd, void *buf, size_t count);
+
+write- write to a file descriptor
+	#include<unistd.h>
+	ssize_t write(int fd, const void *buf, size_t count);
+
+exit- write to a file descriptor
+	#include<stdlib.h>
+	void exit(int status);
+
+lseek- reposition read/write file offset
+	#include<sys/types.h>
+	#include<unistd.h>
+	off_t lseek(int fd, off_t offset, int whence);
+
